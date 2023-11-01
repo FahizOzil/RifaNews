@@ -19,13 +19,14 @@
             <img src="upload/{{ $value->post_img }}" alt="post news" height="100%" width="100%">
             <p class="my-2"> {{ $value->post_title }} </p>
         </div>
-        {{-- post description  --}}
-        <p style="font-family: monospace" class="my-2">  {{ substr($value->description,0,209)}} </p>
-        <p style="font-family: monospace" class="my-2">  {{ substr($value->description,209,400)}} </p>
-        <p style="font-family: monospace" class="my-2">  {{ substr($value->description,400,700)}} </p>
        
-        <p style="font-family: monospace" class="my-2">  {{ substr($value->description,700,1000)}} </p>
-        <p style="font-family: monospace" class="my-2">  {{ substr($value->description,1000,5000)}} </p>
+        {{-- post description  --}}
+        <p style="font-family: monospace" class="my-2">  {{ substr($value->description,0,209) ."."}}   </p>
+         <p style="font-family: monospace" class="my-2">  {{ substr($value->description,209,400)."."}} </p>
+        <p style="font-family: monospace" class="my-2">  {{ substr($value->description,400,700)."."}} </p>
+       
+        <p style="font-family: monospace" class="my-2">  {{ substr($value->description,700,1000)."."}} </p>
+        <p style="font-family: monospace" class="my-2">  {{ substr($value->description,1000,5000)}} </p> 
     @endforeach
 @endsection
 
