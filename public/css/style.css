@@ -1,0 +1,103 @@
+/* haeder  */
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.d-flex input{
+    border-radius: 0px;
+}
+#search-btn{
+    color: black;
+    background-color: white;
+}
+#search-btn:hover{
+    color: white;
+    background-color: black;
+}
+
+
+
+/* menubar css  */
+#menu-nav{
+    border-bottom: 1px solid #e1e1e1;
+}
+
+#menu-bar li a:hover{
+  border: 1px solid black;
+  color: white;
+  background-color: black;
+}
+
+#menu-bar li a:active{
+    border: 1px solid rgb(33, 129, 218) !important;
+    color: white !important;
+    background-color:rgb(35, 138, 197) !important;
+}
+
+/* cantent section  */
+#card{
+    margin-left: 10px;
+    margin-top: 2px;
+}
+#card:hover{
+    box-shadow: 5px 5px 25px;
+}
+
+#card-latest-news{
+    float: left;
+    margin-left: 5px;
+    margin-top: 7px;
+}
+#card-latest-news:hover{
+    box-shadow: 5px 5px 25px;
+}
+#card-mean-head{
+    border-top: 3px solid red;
+}
+#card-mean-head:hover{
+    box-shadow: 5px 5px 25px;
+}
+
+
+
+
+/*  col-md-3 sidebar 3  */
+
+.tech{
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-bottom: 1px solid #e1e1e1;
+    font-size: 30px;
+}
+#right-latest-news:hover{
+    box-shadow: 5px 5px 25px;
+}
+
+#card-hover:hover{
+    box-shadow: 5px 5px 25px;
+}
+
+
+
+
+/* offcanvas  */
+
+
+.offcanvas-body ul li a:hover{
+    background-color: black;
+    color: white !important;
+  }
+
+
+  /* category pages  */
+
+  #category-pages-center:hover{
+    box-shadow: 5px 5px 25px;
+  }
+
+
+
+
+
+  /* about us page with many css i will delete  */
