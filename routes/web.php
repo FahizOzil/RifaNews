@@ -31,7 +31,7 @@ route::get('/user',[AdminPanelController::class,'users'])->name('users');
 route::get('/add',[AdminPanelController::class,'addUsers'])->name('add-user');
 route::post('/add',[AdminPanelController::class,'add']);
 
-route::get('/login',[AdminPanelController::class,'login']);
+route::get('/login',[AdminPanelController::class,'login'])->name('login');
 route::post('/login',[AdminPanelController::class,'loginUser']);
 
 route::get('/update',[AdminPanelController::class,'updateUser'])->name('update-user');

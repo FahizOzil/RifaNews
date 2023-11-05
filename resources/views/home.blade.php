@@ -2,7 +2,7 @@
 @extends('farshell.layout')
 
 @section('title')
-    home Page
+   Where You Get All Type News
 @endsection
 
 
@@ -69,8 +69,13 @@
     </div>
 </div>
 @endforeach
-{{-- pagination  place--}}
- 
+@endsection
+
+{{-- pagination  --}}
+@section('paginate')
+
+    {{ $latest_news->links() }}
+
 @endsection
 
 {{-- right sidebar section  --}}
@@ -105,7 +110,10 @@
 {{-- new container section  --}}
 {{-- sports  --}}
 @section('sport')
-<h3 style="border-bottom: 1px solid #e1e1e1"><i> Sports</i> </h3>
+<div class="home-cat">
+<span  style="border-bottom: 1px solid #e1e1e1;"><i> <h4> Sports </h4></i> </span>
+<span style="border-bottom:2px solid blue;"><a href="{{route('sport')}}" >See More <i class="bi bi-arrow-right"></a></i></span>
+</div>
 @foreach ($sport as $row )
     <div class="card mx-2.5 my-2" id="card-hover" style="width:11.5rem;float:left;height:253px;">
         <a href="/read?read={{$row->post_title}}"><img class="card-img-top" src="upload/{{ $row->post_img }}"
@@ -115,12 +123,15 @@
        </div>
     </div>
  @endforeach
- <a style="border-bottom:2px solid blue" href="{{route('sport')}}" >See More <i class="bi bi-arrow-right"></i></a>
+ 
 @endsection
 
 {{-- politics Section  --}}
 @section('Politics')
-<h3 class="my-2" style="border-bottom: 1px solid #e1e1e1"> <i>Politics</i> </h3>
+<div class="home-cat">
+    <span  style="border-bottom: 1px solid #e1e1e1;"><i> <h4> Politics </h4></i> </span>
+    <span style="border-bottom:2px solid blue;"><a href="{{route('politics')}}" >See More <i class="bi bi-arrow-right"></i></a></span>
+    </div>
 @foreach ($politics as $row )
 <div class="card mx-2.5 my-2" id="card-hover" style="width:11.5rem;float:left;height:253px;">
     <a href="/read?read={{$row->post_title}}"><img class="card-img-top" src="upload/{{ $row->post_img }}"
@@ -131,14 +142,15 @@
 </div>
 @endforeach
 
-    <a style="border-bottom:2px solid blue" href="{{route('politics')}}" >See More <i class="bi bi-arrow-right"></i></a>
-
 @endsection
 
                   {{-- WAR  SECTION --}}
 
  @section('War')
-<h3 class="" style="border-bottom: 1px solid #e1e1e1"> <i>War</i> </h3>
+ <div class="home-cat">
+    <span  style="border-bottom: 1px solid #e1e1e1;"><i> <h4> War </h4></i> </span>
+    <span style="border-bottom:2px solid blue;"><a  href="{{route('war')}}" >See More <i class="bi bi-arrow-right"></i></a></span>
+    </div>
 @foreach ($war as $row )
 <div class="card mx-2.5 my-2" id="card-hover" style="width:11.5rem;float:left;height:253px;">
     <a href="/read?read={{$row->post_title}}"><img class="card-img-top" src="upload/{{ $row->post_img }}"
@@ -148,15 +160,15 @@
    </div>
 </div>
 @endforeach
-
-    <a style="border-bottom:2px solid blue" href="{{route('war')}}" >See More <i class="bi bi-arrow-right"></i></a>
-
 @endsection
 
 {{-- Entertainment  SECTION  --}}
 
 @section('Entertain')
-<h3 class="" style="border-bottom: 1px solid #e1e1e1"> <i>Entertainment</i> </h3>
+<div class="home-cat">
+    <span  style="border-bottom: 1px solid #e1e1e1;"><i> <h4> Entertainment</h4></i> </span>
+    <span style="border-bottom:2px solid blue;"><a  href="{{route('entertain')}}">See More<i class="bi bi-arrow-right"></i></a></span>
+    </div>
 @foreach ($enter as $row )
 <div class="card mx-2.5 my-2" id="card-hover" style="width:11.5rem;float:left;height:253px;">
     <a href="/read?read={{$row->post_title}}"><img class="card-img-top" src="upload/{{ $row->post_img }}"
@@ -166,7 +178,4 @@
    </div>
 </div>
 @endforeach
-
-    <a style="border-bottom:2px solid blue" href="{{route('war')}}" >See More <i class="bi bi-arrow-right"></i></a>
-
 @endsection

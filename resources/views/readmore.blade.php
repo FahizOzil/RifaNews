@@ -78,3 +78,19 @@
 
 
 @endsection
+
+  {{-- politics section use for all news fetch in readmore page --}}
+@section('Politics')
+<h3 style="border-bottom: 1px solid #e1e1e1"><i>More News</i></h3>
+@foreach ($all as $row )
+    <div class="card mx-2.5 my-2" id="card-hover" style="width:11.5rem;float:left;height:253px;">
+        <a href="/read?read={{$row->post_title}}"><img class="card-img-top" src="upload/{{ $row->post_img }}"
+           alt="news-image"> </a>
+       <div class="card-body">
+           <p style="font-weight: 500;font-size:15px;" class="card-title"> <a href="/read?read={{$row->post_title}}"> {{ substr($row->post_title,0,70) .'..' }} </a> </p>
+       </div>
+    </div>
+ @endforeach
+
+
+@endsection

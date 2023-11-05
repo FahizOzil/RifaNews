@@ -20,7 +20,7 @@ a{
 
 /* menubar css  */
 #menu-nav{
-    border-bottom: 1px solid #e1e1e1;
+    /* border-bottom: 1px solid #e1e1e1; */
 }
 
 #menu-bar li a:hover{
@@ -98,6 +98,49 @@ a{
 
 
 
+   /* home page category like sports politics and etc  */
+.home-cat{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e1e1e1;
+
+}
+  
 
 
-  /* about us page with many css i will delete  */
+
+
+
+
+
+
+
+
+
+
+
+  /* media query   922 */
+
+  @media (max-width: 922px) {
+     #socail-head  {
+        display: none !important;
+     }
+     #head-logo  {
+        display: none !important;
+     }
+    #menu-nav{
+        display: none;
+    }
+  }
+
+
+
+  /* media query 790  */
+  @media (max-width: 790px) {
+  #left-sidebar{
+    display: none;
+  }
+  #right-sidebar{
+    display: none;
+  }
+  }

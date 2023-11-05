@@ -1,3 +1,9 @@
+@php
+if(!isset($_SESSION['username'])){
+    return view('admin_panel.login');
+    
+}
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,6 +71,8 @@
 
     @yield('admin_panel-content')
 
+
+   
 </body>
 
 </html>

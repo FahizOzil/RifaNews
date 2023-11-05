@@ -12,7 +12,7 @@ class MenubarPageController extends Controller
     // hone page 
     public function ShowHome(): View{
         // latest news query    --center
-       $result = DB::table('posts')->get()->sortDesc()->take(29);
+       $result = DB::table('posts')->orderByDesc('id')->simplePaginate(29);
         //  recent-news query   --right-side
         $recent = DB::table('posts')->latest('id')->skip(10)->take(6)->get();
         // technology query    --left-side
